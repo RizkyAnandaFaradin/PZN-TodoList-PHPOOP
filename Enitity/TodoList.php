@@ -1,22 +1,23 @@
-<?php 
-namespace Entity{
-   private string $todo;
+<?php
 
-   public function getTodo(): string
+namespace Entity {
+   class TodoList
    {
-      return $this->todo;
-   }
+      private string $todo;
 
-   public function setTodo(string $todo):void
-   {
+      public function __construct(string $todo = "")
+      {
+         $this->todo = $todo;
+      }
 
-   }
+      public function getTodo(): string
+      {
+         return $this->todo;
+      }
 
-   function __construct(string $todo = ""){
-      $this->todo = $todo;
+      public function setTodo(string $todo): void
+      {
+         $this->todo = $todo;
+      }
    }
 }
-
-
-
-?>
