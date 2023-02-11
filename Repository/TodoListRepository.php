@@ -14,16 +14,12 @@ namespace Repository {
    }
 
 
-   class TodoListRepoImpl  implements TodoListRepository
+   class TodoListRepositoryImpl  implements TodoListRepository
    {
-      private array $todolist = array();
+      public array $todoList = array();
 
       function save(TodoList $todoList): void
       {
-         echo PHP_EOL . "TODO LIST" . PHP_EOL;
-         foreach ($todoList as $number => $value) {
-            echo "$number. $value " . PHP_EOL;
-         }
       }
 
       function remove(int $number): bool
@@ -33,7 +29,7 @@ namespace Repository {
 
       function findAll(): array
       {
-         return $this->todolist;
+         return $this->todoList;
       }
    }
 }
